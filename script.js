@@ -8,7 +8,3 @@ var currentScrollPos = window.scrollY;
   }
   prevScrollpos = currentScrollPos;
 }
-var loc = window.location.pathname;
-var dir = loc.substring(0, loc.lastIndexOf('/'));
-console.log(loc)
-console.log(dir)
