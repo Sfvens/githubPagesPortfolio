@@ -34,10 +34,11 @@ body {
 }
 
 .intro {
-  background-color: orange;
-  z-index: -1;
-  position: absolute;
-  width: 100%;
+  background: url(assets/trees.jpg) no-repeat top center fixed;
+  background-size: cover;
+  /* z-index: -1; */
+  height: 400px;
+
 }
 
 .splash-text {

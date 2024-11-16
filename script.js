@@ -4,7 +4,7 @@ window.onscroll = function() {
   let currentScrollPos = window.scrollY;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("header").style.top = "0";
-    } else if(currentScrollPos > 400) { // make sure this value is set the the height of your splash window
+    } else if(currentScrollPos > 400) { // make sure this value is set the the height of your intro
     document.getElementById("header").style.top = "-50px"; /* adjust this value to the height of your header */
   }
   prevScrollpos = currentScrollPos;
