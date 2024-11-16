@@ -1,10 +1,17 @@
-var prevScrollpos = window.scrollY;
+let prevScrollpos = window.scrollY;
 window.onscroll = function() {
-var currentScrollPos = window.scrollY;
+  // logic for header disappear and reappear
+  let currentScrollPos = window.scrollY;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("header").style.top = "0";
-  } else {
-    document.getElementById("header").style.top = "-80px"; /* adjust this value to the height of your header */
+    } else if(currentScrollPos > 400) { // make sure this value is set the the height of your splash window
+    document.getElementById("header").style.top = "-50px"; /* adjust this value to the height of your header */
   }
   prevScrollpos = currentScrollPos;
+
+  //logic for parallax effect
+  // if start or final position > size of window, do nothing
+  // else override regular scroll behavior and change the size of the
+  // window by final-start (negative if going down, positive if going up)
 }
+
