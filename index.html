@@ -44,10 +44,40 @@
     </div>
   </div>
     
-  <div id="about" class="about">About</div>
-  <div id="projects" class="projects">Projects</div>
-  <div id="skills" class="skills">Skills</div>
-  <div id="contact" class="contact">Contact</div>
+  <!-- <div id="about" class="about">About</div> -->
+  <div id="projects" class="projects">Projects
+    <div class="project">
+      <!-- aggressive phone modes app to keep you from distraction-->
+      <div class="project-display"> display
+        <!-- components for image slider and possibly link to project -->
+        <img width=600em src="assets/projects/portfolio/project.png"/>
+        <div class="media-controls"><-- • • • --></div>
+      </div>
+      <div class="project-description"> description
+        <div class="description-section">
+          <div class="title-what"></div>
+          <div class="desc-what"></div>
+        </div>
+        <div class="description-section">
+          <div class="title-why"></div>
+          <div class="desc-why"></div>
+        </div>
+        <div class="description-section">
+          <div class="title-takeaways"></div>
+          <div class="desc-takeaways"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div id="skills" class="skills">Skills</div> -->
+  <div id="contact" class="contact">Contact
+    <form id="contact-form" class="contact-box" action="javascript:;" onsubmit="sendContactRequest()">
+      <input class="input-field" placeholder="Name"></input>
+      <input type="email" class="input-field" placeholder="Email"></input>
+      <textarea class="input-field message" placeholder="Message"></textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
 
   <div class="footer">
     footer - image from <a href="https://www.freepik.com">Freepik</a>

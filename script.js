@@ -10,3 +10,11 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
+function sendContactRequest() {
+  const form = document.getElementById('contact-form');
+  let name = form[0].value;
+  let email = form[1].value;
+  let message = form[2].value;
+
+  console.log(name, email, message);
+}
