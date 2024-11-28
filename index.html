@@ -79,15 +79,9 @@
       <textarea class="input-field message" name="message" placeholder="Message"></textarea>
 
       <input type="hidden" name="replyTo" value="@"> <!-- @ is alias for the client email -->
-      <!-- <input type="hidden" name="redirectTo" value="localhost:8080">  -->
+      <input type="hidden" name="redirectTo" value="https://samcarlsen.github.io/githubPagesPortfolio/#contact"> 
       <button disabled="true" id="contact-submit">Submit</button>
       <script>
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-          event.preventDefault();
-          this.submit();
-          window.location.href="https://samcarlsen.github.io/githubPagesPortfolio/#contact";
-          console.log('form submitted');
-        });
 
         document.getElementById("contact-form").addEventListener("keyup", function(event) {
           if (this['name'].value !== ''
