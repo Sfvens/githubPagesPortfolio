@@ -222,7 +222,7 @@ a.button:hover{
   align-items: center;
 }
 
-.contact-box {
+.contact-form {
   height: 30%;
   display: flex;
   flex-direction: column;
