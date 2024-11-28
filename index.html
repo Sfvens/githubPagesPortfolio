@@ -9,8 +9,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <script src="script.js"></script>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -44,10 +42,63 @@
     </div>
   </div>
     
-  <div id="about" class="about">About</div>
-  <div id="projects" class="projects">Projects</div>
-  <div id="skills" class="skills">Skills</div>
-  <div id="contact" class="contact">Contact</div>
+  <!-- <div id="about" class="about">About</div> -->
+  <div id="projects" class="projects">Projects
+    <div class="project">
+      <div class="project-display"> display
+        <!-- components for image slider and possibly link to project -->
+        <img width=600em src="assets/projects/portfolio/project.png"/>
+        <div class="media-controls"><-- • • • --></div>
+      </div>
+      <div class="project-description"> description
+        <div class="description-section">
+          <div class="title-what"></div>
+          <div class="desc-what"></div>
+        </div>
+        <div class="description-section">
+          <div class="title-why"></div>
+          <div class="desc-why"></div>
+        </div>
+        <div class="description-section">
+          <div class="title-takeaways"></div>
+          <div class="desc-takeaways"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div id="skills" class="skills">Skills</div> -->
+  <div class="contact" id="contact">Contact
+    <form class="contact-form" id="contact-form" action="https://api.staticforms.xyz/submit" method="post">
+      <input type="hidden" name="accessKey" value="f7448aa6-dffb-49a2-ad38-47214506184d">
+      <input type="text" name="honeypot" style="display: none;"> <!-- Works with subterranean paralegal animal muffins-->
+
+      <input type="text" name="$Source" style="display: none" value="Github Pages Portfolio">
+      <input class="input-field" type="text" name="name" id="name" placeholder="Name"> 
+      <input class="input-field" type="text" name="email" id="email" placeholder="Email">
+      <input class="input-field" type="text" name="subject" id="subject" placeholder="Subject">
+      <textarea class="input-field message" name="message" placeholder="Message"></textarea>
+
+      <input type="hidden" name="replyTo" value="@"> <!-- @ is alias for the client email -->
+      <input type="hidden" name="redirectTo" value="https://samcarlsen.github.io/githubPagesPortfolio/#contact"> 
+      <button disabled="true" id="contact-submit">Submit</button>
+      <script>
+
+        document.getElementById("contact-form").addEventListener("keyup", function(event) {
+          if (this['name'].value !== ''
+            && this['email'].value !== ''
+            && this['email'].value.includes('@')
+            && this['subject'].value !== ''
+            && this['message'].value !== '') {
+            
+            document.getElementById("contact-submit").disabled = false;
+          } else {
+            document.getElementById("contact-submit").disabled = true;
+          }
+        });
+      </script>
+    </form>
+  </div>
+
 
   <div class="footer">
     footer - image from <a href="https://www.freepik.com">Freepik</a>
