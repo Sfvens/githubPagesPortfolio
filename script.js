@@ -11,7 +11,3 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
-
-function myFunction() {
-  console.log("this is my function");
-}
