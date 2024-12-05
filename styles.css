@@ -265,8 +265,9 @@ body {
   justify-content: center;
 }
 
-a.button{
-  text-decoration: none;
+.button{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
   margin: .5em;
   padding: 1em;
   background-color: rgb(1, 50, 32);
@@ -274,8 +275,10 @@ a.button{
   border-radius: 25px;
 }
 
-a.button:hover{
-  text-decoration: underline;
+.button:hover{
+  cursor: pointer;
+  background-color: rgb(1, 39, 25);
+  color: rgb(161, 160, 153)
 }
 
 
