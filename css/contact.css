@@ -1,0 +1,94 @@
+.contact {
+  background-color: rgb(1, 50, 32);
+  height: 100vh;
+}
+
+.contact-title { 
+  display: fixed;
+  position: relative;
+  text-align: center;
+  top: 7em;
+}
+
+.contact-title p{
+  position: relative;
+  top: 1em;
+}
+
+.contact-form-container {
+  height: 90%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.input-field {
+  color: black;
+  background-color: rgb(225, 223, 211);
+  border: none;
+  padding: .5em;
+}
+
+.message {
+  width: 75%;
+  height: 5em;
+}
+
+.input-field::-webkit-input-placeholder {
+  font-family: 'myFont', Arial, Helvetica, sans-serif;
+}
+
+.input-field:-ms-input-placeholder {
+  font-family: 'myFont', Arial, Helvetica, sans-serif;
+}
+
+.input-field:-moz-placeholder {
+  font-family: 'myFont', Arial, Helvetica, sans-serif;
+}
+
+.input-field::-moz-placeholder {
+  font-family: 'myFont', Arial, Helvetica, sans-serif;
+}
+
+a.button{
+  text-decoration: none;
+  margin: .5em;
+  padding: 1em;
+  background-color: rgb(1, 50, 32);
+  max-width: fit-content;
+  border-radius: 25px;
+}
+
+a.button:hover{
+  text-decoration: underline;
+}
+
+.submit-button {
+  margin: .5em;
+  padding: 1em;
+  background-color: rgb(1, 50, 32);
+  max-width: fit-content;
+  border-radius: 25px;
+}
+
+.submit-button:disabled {
+  cursor:no-drop;
+  background-color: rgb(1, 39, 25);
+  color: rgb(161, 160, 153)
+}
+
+.submit-button:enabled:hover {
+  cursor: pointer;
+  background-color: rgb(1, 39, 25);
+  color: rgb(161, 160, 153)
+}

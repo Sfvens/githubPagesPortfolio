@@ -1,0 +1,115 @@
+.projects-title {
+  background-color: rgb(1, 50, 32);
+  text-align: center;
+  padding:.3em;
+}
+
+.project {
+  height: 100vh;
+  display: flex;
+}
+
+
+.project-display {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(225, 223, 211);
+}
+
+.display-container {
+  max-height:50%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.display-container h2 {
+  color: rgb(1, 50, 32);
+  text-align: center;
+}
+
+.display-container img {
+  width: 100%;
+}
+
+.display-container a {
+  width: 90%;
+  overflow:hidden;
+}
+
+.image-link {
+  display:inline-block;
+  width:fit-content;
+}
+
+.media-controls {
+  display:none;
+  color: rgb(1, 50, 32);
+}
+
+.project-description {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(1, 50, 32);
+}
+
+.description-container {
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1em;
+}
+
+.project-description h3{
+  text-align:center;
+}
+
+.project-description p{
+  text-align:center;
+}
+
+.swap-display-color {
+  color: rgb(225, 223, 211);
+  background-color: rgb(1, 50, 32);
+}
+
+.swap-description-color {
+  color: rgb(1, 50, 32);
+  background-color: rgb(225, 223, 211);
+}
+
+@media (min-width: 1000px) {
+  .project-description {
+    font-size: 1.3em;
+  }
+}
+
+@media (min-width: 670px ) and (max-width: 999px) {
+  .project-description {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 420px ) and (max-width: 669px) {
+  .project-description {
+    font-size: .8em;
+  }
+}
+
+@media (max-width: 419px) {
+  .project-description {
+    font-size: .7em;
+  }
+}
