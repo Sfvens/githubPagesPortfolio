@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <script src="script.js"></script>
 </head>
 
@@ -15,10 +15,19 @@
   <div id="header" class="header">
     <a href="#top">samcarlsen</a>
     <div class="menu-items">
-      <a href="#about">about</a>
+      <!-- <a href="#about">about</a> -->
       <a href="#projects">projects</a>
-      <a href="#skills">skills</a>
-      <a href="#contact" class="contact-header">contact</a>
+      <!-- <a href="#skills">skills</a> -->
+      <a href="#contact">contact</a>
+    </div>
+    <div class="drop-down" id="drop-down">
+      <img class="hamburger-icon" id="hamburger-icon" src="assets/hamburger-green.png"/>
+      <div class="options" id="options">
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="#skills">skills</a>
+        <a href="#contact">contact</a>
+      </div>
     </div>
   </div>
   <div id="intro" class="intro">
@@ -33,8 +42,11 @@
     </div>
     <div class="about-triangle glass">
       <div class="triangle-display">
-        <div class="about-title">About Me</div>
-        <div class="about-text">I am a new grad software engineer who is passionate about building clean, beautiful systems. In my most recent role, I led the development of two applications and helped build many more while maintaining a GPA of 3.91. If you'd like to get to know me or you want to build something together feel free to reach out below.</div>
+        <div class="about-title" id="normal-about-title"><p class="about-title-text">About Me</p></div>
+        <div class = "about-title" id="smaller-about-title"><p class="about-title-text">About</p></div>
+        <div class="about-text" id="normal-about-text">I am a new grad software engineer who is passionate about building clean, beautiful systems. In my most recent role, I led the development of two applications and helped build many more while maintaining a GPA of 3.91. If you'd like to get to know me or you want to build something together feel free to reach out below.</div>
+        <div class="about-text" id="smaller-about-text">I am a new grad software engineer who is passionate about building clean, beautiful systems. If you'd like to get to know me or you want to build something together feel free to reach out below.</div>
+        <div class="about-text" id="smallerer-about-text">I am a new grad software engineer who is passionate about building clean, beautiful systems.</div>
         <div class="button-wrapper">
           <a href="#contact" class="button">Get in touch</a>
         </div>
@@ -43,25 +55,95 @@
   </div>
     
   <!-- <div id="about" class="about">About</div> -->
-  <div id="projects" class="projects">Projects
+  <div id="projects" class="projects">
+    <div class="projects-title"><h1>Projects</h1></div>
     <div class="project">
-      <div class="project-display"> display
-        <!-- components for image slider and possibly link to project -->
-        <img width=600em src="assets/projects/portfolio/project.png"/>
-        <div class="media-controls"><-- • • • --></div>
+      <div class="project-display"> 
+        <div class="display-container">
+          <h2>Personal CI/CD for Cloud Deployment</h2>
+          <!-- components for image slider and possibly link to project -->
+          <a href="https://github.com/samcarlsen/TerraformGithubActions"><img src="assets/projects/terraformGithubActions/terraformGithubActions.png"/></a>
+          <div class="media-controls"><-- • • • --></div>
+        </div>
       </div>
-      <div class="project-description"> description
-        <div class="description-section">
-          <div class="title-what"></div>
-          <div class="desc-what"></div>
+      <div class="project-description">
+        <div class="description-container">
+          <div class="description-section">
+            <div class="title-what"><h3>What</h3></div>
+            <div class="desc-what"><p>This is a personal CI/CD (Continuous Integration/Continuous Deployment) pipeline that I developed using the IAC (Infrastructure as Code) framework Terraform along with Github Actions. Using an S3 bucket to track cloud resources' state, GitHub Actions authenticates with AWS via OIDC to give Terraform permission to edit resources. As such, I no longer need to use the AWS CLI or manually apply changes to Terraform!</p></div>
+          </div>
+          <div class="description-section">
+            <div class="title-why"><h3>Why</h3></div>
+            <div class="desc-why"><p>Initially, the project was a tutorial I was following, but I reworked the majority of it for customization purposes. The finished project allows me to selectively update cloud resources based on which file was edited automatically on pull request approval. The GitHub Actions are configured to update resources belonging to different accounts based on which branch is being updated allowing me to have development and production versions of a given project. Overall, my goal was to streamline my own interactions with AWS and make the deployment process smoother.</p></div>
+          </div>
+          <div class="description-section">
+            <div class="title-takeaways"><h3>Takeaways</h3></div>
+            <div class="desc-takeaways"><ul>
+              <li>Stronger grasp of GitHub Actions YAML</li>
+              <li>Familiarity with AWS Identity Center profile segregation</li>
+              <li>Understanding of secure CI/CD practices</li>
+            </ul></div>
+          </div>
         </div>
-        <div class="description-section">
-          <div class="title-why"></div>
-          <div class="desc-why"></div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-display swap-display-color"> 
+        <div class="display-container swap-display-color">
+          <h2 style="color: rgb(225, 223, 211)">Cancer Detection U-net</h2>
+          <!-- components for image slider and possibly link to project -->
+          <a><img src="assets/projects/cancerModel/cancerModel.png"/></a>
+          <div class="media-controls"><-- • • • --></div>
         </div>
-        <div class="description-section">
-          <div class="title-takeaways"></div>
-          <div class="desc-takeaways"></div>
+      </div>
+      <div class="project-description swap-description-color">
+        <div class="description-container">
+          <div class="description-section">
+            <div class="title-what"><h3 class="swap-description-color">What</h3></div>
+            <div class="desc-what"><p class="swap-description-color">Leveraged the capabilities of a deep convolutional U-net which I implemented using <a class="swap-description-color" href="https://arxiv.org/pdf/1505.04597">this research paper</a> via PyTorch.</p></div>
+          </div>
+          <div class="description-section">
+            <div class="title-why"><h3 class="swap-description-color">Why</h3></div>
+            <div class="desc-why"><p class="swap-description-color">I am particularly proud of this project because it scratches the surface of what these powerful deep learning models can accomplish in the correct domain. It's a powerful reminder of how the application of a few simple ideas can yield a powerfully humanitarian result.</p></div>
+          </div>
+          <div class="description-section">
+            <div class="title-takeaways"><h3 class="swap-description-color">Takeaways</h3></div>
+            <div class="desc-takeaways"><ul>
+              <li class="swap-description-color">Familiarity with convolutional U-net model architecture</li>
+              <li class="swap-description-color">Understanding of data loading and results display</li>
+              <li class="swap-description-color">A firm grounding in PyTorch</li>
+            </ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-display"> 
+        <div class="display-container">
+          <h2>Basic Website (Frameworkless Single Page Application)</h2>
+          <!-- components for image slider and possibly link to project -->
+          <a href="http://basicwebsite.click"><img src="assets/projects/basicWebsite/basicWebsite.png"/></a>
+          <div class="media-controls"><-- • • • --></div>
+        </div>
+      </div>
+      <div class="project-description">
+        <div class="description-container">
+          <div class="description-section">
+            <div class="title-what"><h3>What</h3></div>
+            <div class="desc-what"><p>On the surface, Basic Website is what the title suggests - A website with a homepage, about page, blog, and even a gallery. Under the hood however, it's a single page application implemented solely with Javascript, HTML, and CSS. Even so, it still has page routing, a dynamic url, and working browser forward and back buttons. Additionally, I developed my own approach to component injection, allowing me to break segments of html into different files and keep the codebase nice and organized.</p></div>
+          </div>
+          <div class="description-section">
+            <div class="title-why"><h3>Why</h3></div>
+            <div class="desc-why"><p>I had a very specific goal in mind when I built this project: I wanted to obtain a stronger understanding of web frameworks and what exactly they were doing for me when I used them. My driving belief was that mastery of fundamentals would yield competence in their corresponding downstream domains, and I wanted to have that background knowledge in my toolbelt for future web projects. </p></div>
+          </div>
+          <div class="description-section">
+            <div class="title-takeaways"><h3>Takeaways</h3></div>
+            <div class="desc-takeaways"><ul>
+              <li>Knowledge of manual page routing methods</li>
+              <li>Familiarity with my own scrappy component injection method</li>
+              <li>Awareness of how the browser manages page history</li>
+            </ul></div>
+          </div>
         </div>
       </div>
     </div>
@@ -79,7 +161,7 @@
       <textarea class="input-field message" name="message" placeholder="Message"></textarea>
 
       <input type="hidden" name="replyTo" value="@"> <!-- @ is alias for the client email -->
-      <input type="hidden" name="redirectTo" value="https://samcarlsen.github.io/githubPagesPortfolio/#contact"> 
+      <input type="hidden" name="redirectTo" value="javascript:void(0)"> 
       <button disabled="true" id="contact-submit">Submit</button>
       <script>
 
