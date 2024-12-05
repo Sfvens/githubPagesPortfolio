@@ -6,13 +6,3 @@ color: rgb(225, 223, 211);
 body {
   background-color: white;
 }
-
-.about {
-  background-color: green;
-  height:50em;
-}
-
-.skills {
-  background-color: red;
-  height: 50em;
-}

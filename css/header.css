@@ -22,18 +22,11 @@
   color: black;
 }
 
-/* .hamburger-icon {
-  padding-right: 1em;
-} */
-
-
 .menu-items {
   display: flex;
   justify-content: space-around;
   width: 10em;
   padding-right: 1.5em;
-  /* font-size: 1.5em; */
-  /* align-items:center; */
 }
 
 .menu-items a {

@@ -74,7 +74,6 @@ a.button:hover{
 }
 
 .submit-button {
-    /* text-decoration: none; */
   margin: .5em;
   padding: 1em;
   background-color: rgb(1, 50, 32);
